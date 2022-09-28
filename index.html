@@ -29,13 +29,21 @@
     </div>
     <div class="px-3 py-2 border-bottom mb-3">
         <div class="container d-flex flex-wrap justify-content-center">
-            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                <input type="search" id="cityInput"  class="form-control" placeholder="Please enter city here" aria-label="Search">
+            <form id="usercityInput" class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search" action="none">
+                <input type="search" id="cityInput" class="form-control" placeholder="Please enter city here"
+                    aria-label="Search">
                 <button type="button" id="citySelection" class="btn btn-outline-secondary">Search</button>
-                <h2 id="cityName">--city that user selected shows up here--</h2>
+                <div id="city">
+                    <h2 id="cityName"> </h2>
+                </div>
+
             </form>
+           
 
         </div>
+        <div id="invalidCity" class="alert alert-danger d-none" role="alert">
+            This is a danger alert—check it out!
+          </div>
     </div>
     </header>
     <div class="b-example-divider"></div>
@@ -44,9 +52,10 @@
     <div class="px-4 py-5 my-5 text-center">
         <img class="d-block mx-auto mb-4" src="https://pic.onlinewebfonts.com/svg/img_315219.png" alt="" width="72"
             height="57">
-        <h1 class="display-5 fw-bold">City that user selected (mm-dd-yyyy) </h1>
+        <h1 id="date" class="display-5 fw-bold">City that user selected (mm-dd-yyyy) </h1>
         <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"> <br> Temperature: degrees celius <br> <br> WindSpeed: km/h </br> <br> Humidity: %
+            <p class="lead mb-4"> <br> Temperature: <span id="todayDegree">degrees celius</span>&#8451; <br> <br>
+                WindSpeed: <span id="todayWindSpeed"></span>km/h </br> <br> Humidity:<span id="todayHumidity"></span> %
                 </br></p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <h3> Next 5 Day Forecast: </h3>
@@ -57,29 +66,13 @@
     <div class="b-example-divider"></div>
 
     <div class="card-group">
-        <div class="card">
-            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="">
-            <div class="card-body">
-                <h5 class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: degrees celius <br> <br> WindSpeed: km/h </br> <br> Humidity: %
-                    </br></p>
-            </div>
 
-        </div>
         <div class="card">
             <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: degrees celius <br> <br> WindSpeed: km/h </br> <br> Humidity: %
-                    </br></p>
-            </div>
-
-        </div>
-        <div class="card">
-            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: degrees celius <br> <br> WindSpeed: km/h </br> <br> Humidity: %
+                <h5 id="date1" class="card-title">mm-dd-yyyy</h5>
+                <p class="card-text"><br> Temperature: <span id="temp1">degrees</span>&#8451; <br> <br> WindSpeed: <span
+                        id="wind1"></span>km/h </br> <br> Humidity: <span id="humdity1"></span>%
                     </br></p>
             </div>
         </div>
@@ -87,22 +80,42 @@
         <div class="card">
             <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: degrees celius <br> <br> WindSpeed: km/h </br> <br> Humidity: %
+                <h5 id="date2" class="card-title">mm-dd-yyyy</h5>
+                <p class="card-text"><br> Temperature: <span id="temp2">degrees</span>&#8451; <br> <br> WindSpeed: <span
+                        id="wind2"></span>km/h </br> <br> Humidity: <span id="humdity2"></span>%
                     </br></p>
             </div>
         </div>
-
         <div class="card">
             <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: degrees celius <br> <br> WindSpeed: km/h </br> <br> Humidity: %
+                <h5 id="date3" class="card-title">mm-dd-yyyy</h5>
+                <p class="card-text"><br> Temperature: <span id="temp3">degrees</span> &#8451;<br> <br> WindSpeed: <span
+                        id="wind3"></span>km/h </br> <br> Humidity: <span id="humdity3"></span>%
+                    </br></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 id="date4" class="card-title">mm-dd-yyyy</h5>
+                <p class="card-text"><br> Temperature: <span id="temp4">degrees</span>&#8451; <br> <br> WindSpeed: <span
+                        id="wind4"></span>km/h </br> <br> Humidity: <span id="humdity4"></span>%
+                    </br></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 id="date5" class="card-title">mm-dd-yyyy</h5>
+                <p class="card-text"><br> Temperature: <span id="temp5">degrees</span> &#8451;<br> <br> WindSpeed: <span
+                        id="wind5"></span>km/h </br> <br> Humidity: <span id="humdity5"></span>%
                     </br></p>
             </div>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
