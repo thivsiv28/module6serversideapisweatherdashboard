@@ -36,81 +36,91 @@
                 <div id="city">
                     <h2 id="cityName"> </h2>
                 </div>
+                <ul id="savedCitiesList">
+
+                </ul>
 
             </form>
-           
+
 
         </div>
         <div id="invalidCity" class="alert alert-danger d-none" role="alert">
             This is a danger alert—check it out!
-          </div>
+        </div>
     </div>
     </header>
     <div class="b-example-divider"></div>
 
-
-    <div class="px-4 py-5 my-5 text-center">
-        <img class="d-block mx-auto mb-4" src="https://pic.onlinewebfonts.com/svg/img_315219.png" alt="" width="72"
-            height="57">
-        <h1 id="date" class="display-5 fw-bold">City that user selected (mm-dd-yyyy) </h1>
-        <div class="col-lg-6 mx-auto">
-            <p class="lead mb-4"> <br> Temperature: <span id="todayDegree">degrees celius</span>&#8451; <br> <br>
-                WindSpeed: <span id="todayWindSpeed"></span>km/h </br> <br> Humidity:<span id="todayHumidity"></span> %
-                </br></p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <h3> Next 5 Day Forecast: </h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="b-example-divider"></div>
-
-    <div class="card-group">
-
-        <div class="card">
-            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 id="date1" class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: <span id="temp1">degrees</span>&#8451; <br> <br> WindSpeed: <span
-                        id="wind1"></span>km/h </br> <br> Humidity: <span id="humdity1"></span>%
+    <div id="maincontent" class="d.none">
+        <div class="px-4 py-5 my-5 text-center">
+            <img id=todayIcon class="d-block mx-auto mb-4" src="" alt="weather icon" width="200" height="57">
+            <h1 id="cityChosen"> </h1>
+            <h1 id="date" class="display-5 fw-bold">City that user selected (mm-dd-yyyy) </h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4"> <br> Temperature: <span id="todayDegree">degrees celius</span>&#8451; <br> <br>
+                    WindSpeed: <span id="todayWindSpeed"></span>km/h </br> <br> Humidity:<span
+                        id="todayHumidity"></span> %
                     </br></p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <h3> Next 5 Day Forecast: </h3>
+                </div>
             </div>
         </div>
 
-        <div class="card">
-            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 id="date2" class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: <span id="temp2">degrees</span>&#8451; <br> <br> WindSpeed: <span
-                        id="wind2"></span>km/h </br> <br> Humidity: <span id="humdity2"></span>%
-                    </br></p>
+        <div class="b-example-divider"></div>
+
+        <div class="card-group">
+
+            <div class="card">
+                <img src="" id="icon1" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="date1" class="card-title">mm-dd-yyyy</h5>
+                    <p class="card-text"><br> Temperature: <span id="temp1">degrees</span>&#8451; <br> <br> WindSpeed:
+                        <span id="wind1"></span>km/h </br> <br> Humidity: <span id="humdity1"></span>%
+                        </br>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 id="date3" class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: <span id="temp3">degrees</span> &#8451;<br> <br> WindSpeed: <span
-                        id="wind3"></span>km/h </br> <br> Humidity: <span id="humdity3"></span>%
-                    </br></p>
+
+            <div class="card">
+                <img src="" id="icon2" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="date2" class="card-title">mm-dd-yyyy</h5>
+                    <p class="card-text"><br> Temperature: <span id="temp2">degrees</span>&#8451; <br> <br> WindSpeed:
+                        <span id="wind2"></span>km/h </br> <br> Humidity: <span id="humdity2"></span>%
+                        </br>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 id="date4" class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: <span id="temp4">degrees</span>&#8451; <br> <br> WindSpeed: <span
-                        id="wind4"></span>km/h </br> <br> Humidity: <span id="humdity4"></span>%
-                    </br></p>
+            <div class="card">
+                <img src="" id="icon3" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="date3" class="card-title">mm-dd-yyyy</h5>
+                    <p class="card-text"><br> Temperature: <span id="temp3">degrees</span> &#8451;<br> <br> WindSpeed:
+                        <span id="wind3"></span>km/h </br> <br> Humidity: <span id="humdity3"></span>%
+                        </br>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="https://pic.onlinewebfonts.com/svg/img_315219.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 id="date5" class="card-title">mm-dd-yyyy</h5>
-                <p class="card-text"><br> Temperature: <span id="temp5">degrees</span> &#8451;<br> <br> WindSpeed: <span
-                        id="wind5"></span>km/h </br> <br> Humidity: <span id="humdity5"></span>%
-                    </br></p>
+            <div class="card">
+                <img src="" id="icon4" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="date4" class="card-title">mm-dd-yyyy</h5>
+                    <p class="card-text"><br> Temperature: <span id="temp4">degrees</span>&#8451; <br> <br> WindSpeed:
+                        <span id="wind4"></span>km/h </br> <br> Humidity: <span id="humdity4"></span>%
+                        </br>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="" id="icon5" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="date5" class="card-title">mm-dd-yyyy</h5>
+                    <p class="card-text"><br> Temperature: <span id="temp5">degrees</span> &#8451;<br> <br> WindSpeed:
+                        <span id="wind5"></span>km/h </br> <br> Humidity: <span id="humdity5"></span>%
+                        </br>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
